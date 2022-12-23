@@ -1,12 +1,15 @@
 package chegamais.com.chagamais.model;
 
 
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.util.Collection;
 
 
 @Entity
@@ -27,7 +30,6 @@ public class Usuario {
     
     
     public Usuario() {
-
 
     }
 
@@ -110,12 +112,4 @@ public class Usuario {
         }
     }
 
-    
-
-    
-
-    
-
-    
-    
 }

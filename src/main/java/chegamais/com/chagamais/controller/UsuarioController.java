@@ -46,6 +46,7 @@ public class UsuarioController {
         return this.gerarResposta(UsuarioDTO, 200);
     }
 
+    /* Método em AuthController
     @PostMapping
     public ResponseEntity<UsuarioResponse> cadastrar(@RequestBody @Valid UsuarioForm UsuarioForm){
 
@@ -53,6 +54,7 @@ public class UsuarioController {
 
         return this.gerarResposta(UsuarioDTO, 200);
     }
+     */
 
     @PutMapping("/{id}")
     public ResponseEntity<UsuarioResponse> atualizar(@RequestBody UsuarioFormUpdate UsuarioFormUpdate, @PathVariable Long id){
