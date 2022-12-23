@@ -28,7 +28,7 @@ import chegamais.com.chagamais.services.UsuarioService;
 public class UsuarioController {
 
     @Autowired
-    private UsuarioService usuarioService;
+    private  UsuarioService usuarioService;
 
     @GetMapping
     public List<UsuarioResponse> listar(){
@@ -91,5 +91,13 @@ public class UsuarioController {
     	
     	return responses;
     }
+
+    public  UsuarioService getUsuarioService() {
+        return usuarioService;
+    }
+
+  
+
+    
     
 }

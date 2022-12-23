@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import chegamais.com.chagamais.controller.DTO.GrupoDTO;
+import chegamais.com.chagamais.controller.DTO.UsuarioDTO;
 import chegamais.com.chagamais.model.Grupo;
 import chegamais.com.chagamais.repository.GrupoRepository;
 
@@ -75,6 +76,13 @@ public class GrupoService implements ServiceInteface<GrupoDTO>{
         grupoRepository.deleteById(id);
 
         return GrupoDTO;
+    }
+
+    public UsuarioDTO inserirUsuarioNoGrupo(UsuarioDTO usuarioDto, GrupoDTO grupoDTO){
+
+        grupoDTO.converterParaModel().getMembros().add(usuarioDto.converterParaModel());
+        return usuarioDto;
+
     }
 
      //funcoes auxiliares
